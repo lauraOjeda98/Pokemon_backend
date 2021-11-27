@@ -7,6 +7,7 @@ import { Pokestadistica } from './entities/pokestadistica.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Pokestadistica])],
   controllers: [PokestadisticasController],
-  providers: [PokestadisticasService]
+  providers: [PokestadisticasService],
+  exports: [PokestadisticasService]
 })
 export class PokestadisticasModule {}

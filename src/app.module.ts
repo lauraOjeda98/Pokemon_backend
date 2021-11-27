@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PokestadisticasModule } from './pokestadisticas/pokestadisticas.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { PokestadisticasModule } from './pokestadisticas/pokestadisticas.module'
       synchronize: true,
     }),
     PokestadisticasModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

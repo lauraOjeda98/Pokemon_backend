@@ -18,9 +18,9 @@ export class PokestadisticasService {
   findAll() {
     return this.pokestadisticaRepository.find();
   }
-
-  findOne(id: number) {
-    return this.pokestadisticaRepository.findOne(id);
+  
+  async findOne(id: number) {
+    return await this.pokestadisticaRepository.findOne(id);
   }
 
   update(id: number, updatePokestadisticaDto: UpdatePokestadisticaDto) {
